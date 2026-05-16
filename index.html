@@ -78,11 +78,32 @@
     z-index:-1;
   }
   .hero-eyebrow { font-family:'Cinzel',serif; font-size:.56rem; letter-spacing:.45em; color:var(--gold); text-transform:uppercase; margin-bottom:2rem; opacity:.75; }
+  .hero-author-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: .15em;
+  }
+  .hero-author-photo {
+    width: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(201,168,76,.4);
+    box-shadow: 0 0 40px rgba(139,26,26,.3), 0 0 0 6px rgba(201,168,76,.07);
+    flex-shrink: 0;
+  }
+  .hero-author-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(10%);
+  }
   .hero-name {
     font-family:'Cormorant Garamond',serif;
     font-size: clamp(4rem,10vw,8rem);
     font-weight:300; line-height:1; color:var(--cream); letter-spacing:-.015em;
-    margin-bottom:.15em;
+    margin-bottom: 0;
   }
   .hero-name em { font-style:italic; color:var(--red); opacity:.88; }
   .hero-sub { font-size:.7rem; letter-spacing:.32em; color:var(--muted); text-transform:uppercase; margin-bottom:2.5rem; }
@@ -148,7 +169,7 @@
   .btn-uiclap { color:#a09aff; border-color:rgba(160,154,255,.28); background:rgba(160,154,255,.05); }
   .btn-uiclap:hover { background:rgba(160,154,255,.14); border-color:rgba(160,154,255,.55); }
 
-  /* ── AUDIOBOOK FEATURE ── */
+  /* ── AUDIOBOOK ── */
   .audio-feature {
     background:var(--card); border:1px solid var(--border-hover); border-radius:3px;
     overflow:hidden; display:grid; grid-template-columns:220px 1fr;
@@ -160,13 +181,32 @@
   .audio-title { font-family:'Cormorant Garamond',serif; font-size:2rem; color:var(--cream); margin-bottom:.5em; }
   .audio-desc { font-size:.85rem; color:#a89e8e; line-height:1.9; margin-bottom:1.8rem; }
 
+  /* ── SOCIAL SECTION ── */
+  .social-section { background:var(--bg3); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:3rem 2rem; text-align:center; }
+  .social-inner { max-width:680px; margin:0 auto; }
+  .social-title { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; font-style:italic; color:var(--cream); margin-bottom:2rem; opacity:.85; }
+  .social-links { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; }
+  .social-btn {
+    display:inline-flex; align-items:center; gap:9px;
+    font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:.2em; text-transform:uppercase;
+    padding:10px 22px; border-radius:2px; text-decoration:none; border:1px solid;
+    transition:all .35s;
+  }
+  .s-yt  { color:#ff4444; border-color:rgba(255,68,68,.3); background:rgba(255,68,68,.04); }
+  .s-yt:hover  { background:rgba(255,68,68,.1); border-color:rgba(255,68,68,.6); }
+  .s-sp  { color:#1db954; border-color:rgba(29,185,84,.3); background:rgba(29,185,84,.04); }
+  .s-sp:hover  { background:rgba(29,185,84,.1); border-color:rgba(29,185,84,.6); }
+  .s-wa  { color:#4ade80; border-color:rgba(74,222,128,.3); background:rgba(74,222,128,.04); }
+  .s-wa:hover  { background:rgba(74,222,128,.1); border-color:rgba(74,222,128,.6); }
+
   /* ── ABOUT & FOOTER ── */
   .about-section { background:var(--bg); padding:5rem 2rem; text-align:center; border-top:1px solid var(--border); }
+  .about-avatar { width:78px; height:78px; border-radius:50%; border:1px solid rgba(201,168,76,.28); background:var(--bg3); margin:0 auto 1.6rem; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.7rem; color:var(--gold); }
   .about-quote { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-style:italic; color:var(--cream); opacity:.8; }
   footer { background:var(--bg); border-top:1px solid var(--border); padding:1.8rem 2rem; text-align:center; }
   footer p { font-size:.64rem; color:var(--muted); opacity:.45; }
 
-  @media(max-width:740px) { .audio-feature { grid-template-columns:1fr; } .nav-links { display:none; } }
+  @media(max-width:740px) { .audio-feature { grid-template-columns:1fr; } .nav-links { display:none; } .hero-author-row { flex-direction: column; gap: 1rem; } .hero-author-photo { width: 140px; } }
 </style>
 </head>
 <body>
@@ -186,9 +226,16 @@
 
 <section class="hero" id="topo">
   <div class="hero-bg"></div>
-  <p class="hero-eyebrow">Horror · Literatura das Sombras</p>
-  <h1 class="hero-name">Éverton <em>Marques</em></h1>
-  <p class="hero-sub">Escritor & Narrador</p>
+  <p class="hero-eyebrow">Obras Autorais · Horror · Literatura das Sombras</p>
+  <div class="hero-author-row">
+    <div class="hero-author-photo">
+      <img src="https://github.com/evertongmarques-cpu.png" alt="Éverton Marques">
+    </div>
+    <div>
+      <h1 class="hero-name">Éverton <em>Marques</em></h1>
+      <p class="hero-sub">Escritor & Narrador de Histórias</p>
+    </div>
+  </div>
   <div class="hero-rule"><span>✠</span></div>
   <p class="hero-desc">Explorando o horror de proximidade e os mistérios que habitam entre a luz e a escuridão.</p>
   <a href="#ebooks" class="hero-cta">Ver Catálogo</a>
@@ -211,7 +258,7 @@
         <span class="book-genre">Espiritualidade</span>
         <h3 class="book-title">IRMÃO MAIOR</h3>
         <p class="book-callout">Um relato de libertação que transforma o medo em despertar.</p>
-        <p class="book-desc">Em IRMÃO MAIOR, o autor despe-se das amarras religiosas para travar um diálogo visceral com a figura mais enigmática da história.</p>
+        <p class="book-desc">Em IRMÃO MAIOR, o autor despe-se das amarras religiosas para travar um diálogo visceral com a figura mais enigmática e amada da história.</p>
         <div class="btns">
           <a href="https://loja.uiclap.com/titulo/ua171656" class="btn btn-uiclap" target="_blank">Comprar na UICLAP</a>
         </div>
@@ -266,7 +313,18 @@
   </div>
 </div>
 
+<section class="social-section" id="redes">
+  <div class="social-inner">
+    <h3 class="social-title">Acompanhe as histórias diariamente...</h3>
+    <div class="social-links">
+      <a href="https://youtube.com/c/ContosCausosdeArrepiar" class="social-btn s-yt" target="_blank">YouTube</a>
+      <a href="https://shre.ink/contosecausosdearrepiar" class="social-btn s-sp" target="_blank">Spotify</a>
+    </div>
+  </div>
+</section>
+
 <section class="about-section">
+  <div class="about-avatar">✠</div>
   <p class="about-quote">"Não há nada a temer, além do que reside dentro de nós mesmos quando as luzes se apagam."</p>
 </section>
 
