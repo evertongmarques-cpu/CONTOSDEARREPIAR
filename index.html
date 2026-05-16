@@ -9,83 +9,62 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --bg:   #0d0c0b;
-    --card: #131110;
-    --border: rgba(210,185,140,0.11);
-    --gold: #c9a84c;
-    --cream: #f0e8d8;
-    --muted: #7a756b;
+    --bg: #0d0c0b; --card: #131110; --border: rgba(210,185,140,0.11);
+    --gold: #c9a84c; --cream: #f0e8d8; --muted: #7a756b;
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
   body { background-color: var(--bg); color: var(--cream); font-family: 'Raleway', sans-serif; line-height: 1.6; }
   .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-  header { padding: 80px 0 60px; text-align: center; }
-  .logo-area h1 { font-family: 'Cinzel', serif; font-size: 2.8rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 10px; }
-  .logo-area p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.4rem; color: var(--muted); }
-  .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; padding-bottom: 100px; }
+  header { padding: 60px 0; text-align: center; }
+  .logo-area h1 { font-family: 'Cinzel', serif; font-size: 2.5rem; letter-spacing: 0.2em; color: var(--gold); }
+  .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; padding-bottom: 80px; }
   .book-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; transition: var(--transition); display: flex; flex-direction: column; }
-  .book-card:hover { border-color: var(--gold); transform: translateY(-8px); }
-  .book-cover-wrapper { position: relative; width: 100%; aspect-ratio: 2/3; overflow: hidden; }
+  .book-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+  .book-cover-wrapper { position: relative; width: 100%; aspect-ratio: 2/3; background: #000; }
   .book-cover { width: 100%; height: 100%; object-fit: cover; }
-  .book-badge { position: absolute; top: 15px; right: 15px; background: var(--gold); color: #000; padding: 4px 12px; font-family: 'Cinzel', serif; font-size: 0.7rem; font-weight: 600; }
-  .book-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
-  .book-title { font-family: 'Cinzel', serif; font-size: 1.4rem; margin-bottom: 15px; color: var(--cream); }
-  .book-description { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: #a19d94; margin-bottom: 25px; }
-  .book-footer { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 20px; border-top: 1px solid var(--border); }
-  .buy-button { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 10px 20px; font-family: 'Cinzel', serif; font-size: 0.75rem; text-decoration: none; transition: var(--transition); }
+  .book-badge { position: absolute; top: 10px; right: 10px; background: var(--gold); color: #000; padding: 3px 10px; font-size: 0.7rem; font-weight: bold; font-family: 'Cinzel'; }
+  .book-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+  .book-title { font-family: 'Cinzel', serif; font-size: 1.3rem; margin-bottom: 10px; color: var(--gold); }
+  .book-description { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #a19d94; margin-bottom: 20px; }
+  .book-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid var(--border); }
+  .buy-button { border: 1px solid var(--gold); color: var(--gold); padding: 8px 15px; text-decoration: none; font-size: 0.8rem; font-family: 'Cinzel'; transition: 0.3s; }
   .buy-button:hover { background: var(--gold); color: #000; }
 </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <div class="logo-area">
-        <h1>ÉVERTON MARQUES</h1>
-        <p>Contos & Causos de Arrepiar</p>
-      </div>
-    </header>
+    <header><div class="logo-area"><h1>ÉVERTON MARQUES</h1><p>Escritor</p></div></header>
     <main>
       <section class="books-grid">
         <article class="book-card">
           <div class="book-cover-wrapper">
-            <img src="capa-irmao-maior.jpg" alt="Capa Irmão Maior" class="book-cover">
-            <div class="book-badge">Novo</div>
+            <img src="capa-irmao-maior.jpg" alt="Irmão Maior" class="book-cover">
+            <div class="book-badge">Lançamento</div>
           </div>
           <div class="book-info">
             <h3 class="book-title">IRMÃO MAIOR</h3>
             <p class="book-description">Um diálogo visceral que transforma o medo em despertar espiritual.</p>
-            <div class="book-footer">
-              <span>R$ 40,94</span>
-              <a href="https://loja.uiclap.com/titulo/ua171656" target="_blank" class="buy-button">Comprar</a>
-            </div>
+            <div class="book-footer"><span>R$ 40,94</span><a href="https://loja.uiclap.com/titulo/ua171656" target="_blank" class="buy-button">Comprar</a></div>
           </div>
         </article>
-
         <article class="book-card">
           <div class="book-cover-wrapper">
-            <img src="https://uiclap.s3.us-east-1.amazonaws.com/market/65846-alem-do-medo.jpg" alt="Capa Além do Medo" class="book-cover">
+            <img src="https://uiclap.s3.us-east-1.amazonaws.com/market/65846-alem-do-medo.jpg" alt="Além do Medo" class="book-cover">
           </div>
           <div class="book-info">
             <h3 class="book-title">ALÉM DO MEDO</h3>
             <p class="book-description">Contos autorais de terror psicológico e horror de proximidade.</p>
-            <div class="book-footer">
-              <span>R$ 38,50</span>
-              <a href="https://loja.uiclap.com/titulo/ua65846" target="_blank" class="buy-button">Comprar</a>
-            </div>
+            <div class="book-footer"><span>R$ 38,50</span><a href="https://loja.uiclap.com/titulo/ua65846" target="_blank" class="buy-button">Comprar</a></div>
           </div>
         </article>
-
         <article class="book-card">
           <div class="book-cover-wrapper">
-            <img src="https://uiclap.s3.us-east-1.amazonaws.com/market/66472-bestiario-de-arrepiar-o-catalogo-das-sombras.jpg" alt="Capa Bestiário" class="book-cover">
+            <img src="https://uiclap.s3.us-east-1.amazonaws.com/market/66472-bestiario-de-arrepiar-o-catalogo-das-sombras.jpg" alt="Bestiário" class="book-cover">
           </div>
           <div class="book-info">
             <h3 class="book-title">BESTIÁRIO</h3>
             <p class="book-description">O catálogo definitivo das criaturas que habitam as sombras.</p>
-            <div class="book-footer">
-              <span>R$ 44,00</span>
-              <a href="https://loja.uiclap.com/titulo/ua66472" target="_blank" class="buy-button">Comprar</a>
-            </div>
+            <div class="book-footer"><span>R$ 44,00</span><a href="https://loja.uiclap.com/titulo/ua66472" target="_blank" class="buy-button">Comprar</a></div>
           </div>
         </article>
       </section>
