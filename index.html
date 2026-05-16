@@ -55,194 +55,100 @@
     text-decoration:none; transition:all .3s;
   }
   .nav-icon:hover { border-color:var(--border-hover); color:var(--gold-light); }
-  .nav-wa {
-    display:inline-flex; align-items:center; gap:6px;
-    font-size:.64rem; letter-spacing:.1em; color:#4ade80;
-    border:1px solid rgba(74,222,128,.25); padding:5px 12px; border-radius:2px;
-    text-decoration:none; transition:all .3s; white-space:nowrap;
-  }
-  .nav-wa:hover { background:rgba(74,222,128,.08); border-color:rgba(74,222,128,.5); }
 
   /* ── HERO ── */
   .hero {
-    min-height: 100vh; display:flex; flex-direction:column;
+    min-height: 80vh; display:flex; flex-direction:column;
     align-items:center; justify-content:center; text-align:center;
-    padding: 7rem 2rem 5rem; position:relative; overflow:hidden;
+    padding: 6rem 2rem 4rem; position:relative;
   }
-  .hero-bg {
-    position:absolute; inset:0;
-    background:
-      radial-gradient(ellipse 70% 55% at 50% -5%, rgba(139,26,26,.14) 0%, transparent 65%),
-      radial-gradient(ellipse 50% 35% at 10% 100%, rgba(201,168,76,.04) 0%, transparent 60%),
-      linear-gradient(180deg, #0d0c0b 0%, #090807 100%);
-    z-index:-1;
-  }
-  .hero-eyebrow { font-family:'Cinzel',serif; font-size:.56rem; letter-spacing:.45em; color:var(--gold); text-transform:uppercase; margin-bottom:2rem; opacity:.75; }
   .hero-author-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: .15em;
+    display: flex; align-items: center; justify-content: center;
+    gap: 2rem; margin-bottom: 1.5rem;
   }
   .hero-author-photo {
-    width: 180px;
-    border-radius: 12px;
-    overflow: hidden;
+    width: 180px; border-radius: 12px; overflow: hidden;
     border: 2px solid rgba(201,168,76,.4);
-    box-shadow: 0 0 40px rgba(139,26,26,.3), 0 0 0 6px rgba(201,168,76,.07);
-    flex-shrink: 0;
+    box-shadow: 0 0 40px rgba(139,26,26,.3);
   }
-  .hero-author-photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: grayscale(10%);
-  }
+  .hero-author-photo img { width: 100%; height: auto; display: block; filter: grayscale(10%); }
   .hero-name {
     font-family:'Cormorant Garamond',serif;
-    font-size: clamp(4rem,10vw,8rem);
-    font-weight:300; line-height:1; color:var(--cream); letter-spacing:-.015em;
-    margin-bottom: 0;
+    font-size: clamp(3rem,8vw,5rem);
+    font-weight:300; line-height:1; color:var(--cream);
   }
   .hero-name em { font-style:italic; color:var(--red); opacity:.88; }
-  .hero-sub { font-size:.7rem; letter-spacing:.32em; color:var(--muted); text-transform:uppercase; margin-bottom:2.5rem; }
-  .hero-rule { display:flex; align-items:center; gap:1.2rem; margin:0 auto 2.5rem; opacity:.3; width:fit-content; }
-  .hero-rule::before,.hero-rule::after { content:''; width:80px; height:1px; background:var(--gold); }
-  .hero-rule span { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--gold); }
-  .hero-desc { max-width:500px; font-size:.98rem; color:#a89e8e; line-height:2; margin-bottom:3rem; }
-  .hero-cta {
-    display:inline-flex; align-items:center; gap:10px;
-    font-family:'Cinzel',serif; font-size:.66rem; letter-spacing:.28em; text-transform:uppercase;
-    color:var(--gold); border:1px solid rgba(201,168,76,.3); padding:12px 28px;
-    border-radius:2px; text-decoration:none; transition:all .4s;
-  }
-  .hero-cta:hover { background:rgba(201,168,76,.08); border-color:rgba(201,168,76,.6); }
+  .hero-sub { font-size:.7rem; letter-spacing:.32em; color:var(--muted); text-transform:uppercase; }
 
-  /* ── GRID ── */
+  /* ── GRID & CARDS ── */
+  .sec-head { text-align:center; padding:4rem 2rem 2rem; }
+  .sec-title { font-family:'Cormorant Garamond',serif; font-size:2.5rem; color:var(--cream); }
   .books-wrap { max-width:1160px; margin:0 auto; padding:0 1.5rem 5rem; }
   .books-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.6rem; }
-
-  /* ── CARD ── */
+  
   .book-card {
     background:var(--card); border:1px solid var(--border); border-radius:3px;
-    overflow:hidden; display:flex; flex-direction:column;
-    transition:border-color .4s, transform .4s, box-shadow .4s;
+    overflow:hidden; display:flex; flex-direction:column; transition: 0.4s;
   }
-  .book-card:hover {
-    border-color:var(--border-hover); transform:translateY(-6px);
-    box-shadow:0 24px 60px rgba(0,0,0,.5);
-  }
-  .book-cover {
-    position:relative; aspect-ratio:2/3; background:var(--bg3);
-    overflow:hidden;
-  }
-  .book-cover img {
-    width:100%; height:100%; object-fit:cover; display:block;
-    transition:transform .65s ease; opacity:.95;
-  }
-  .format-badge {
-    position:absolute; top:10px; left:10px;
-    font-family:'Cinzel',serif; font-size:.48rem; letter-spacing:.18em; text-transform:uppercase;
-    padding:4px 9px; background:rgba(10,9,8,.9); border:1px solid rgba(201,168,76,.35);
-    color:var(--gold-light); border-radius:2px;
-  }
+  .book-card:hover { border-color:var(--gold); transform:translateY(-6px); }
+  .book-cover { position:relative; aspect-ratio:2/3; background:var(--bg3); overflow:hidden; }
+  .book-cover img { width:100%; height:100%; object-fit:cover; display:block; }
   .price-badge {
-    position:absolute; bottom:10px; right:10px;
-    font-family:'Cinzel',serif; font-size:.72rem; font-weight:600;
-    padding:5px 12px; background:rgba(10,9,8,.92); border:1px solid rgba(201,168,76,.4);
-    color:var(--gold-light); border-radius:2px;
+    position:absolute; bottom:10px; right:10px; background:rgba(10,9,8,.9);
+    border:1px solid var(--gold); color:var(--gold-light);
+    padding:5px 12px; font-size:.75rem; font-weight:600;
   }
-  .book-info { padding:1.3rem 1.4rem 1.4rem; flex:1; display:flex; flex-direction:column; }
-  .book-genre { font-size:.56rem; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); opacity:.7; margin-bottom:.5rem; }
-  .book-title { font-family:'Cormorant Garamond',serif; font-size:1.28rem; font-weight:400; color:var(--cream); line-height:1.25; margin-bottom:.6rem; }
-  .book-callout { font-family:'Cormorant Garamond',serif; font-size:.92rem; font-style:italic; color:var(--red); opacity:.78; margin-bottom:.75rem; line-height:1.5; }
-  .book-desc { font-size:.78rem; color:var(--muted); line-height:1.82; margin-bottom:1.3rem; flex:1; }
-  .btns { display:flex; flex-direction:column; gap:.45rem; margin-top:auto; }
+  .book-info { padding:1.5rem; flex:1; display:flex; flex-direction:column; }
+  .book-title { font-family:'Cinzel',serif; font-size:1.2rem; color:var(--cream); margin-bottom:10px; }
+  .book-desc { font-size:.85rem; color:var(--muted); line-height:1.6; margin-bottom:1.5rem; flex:1; }
+  
   .btn {
-    display:inline-flex; align-items:center; justify-content:center; gap:8px;
-    padding:9px 16px; border-radius:2px;
-    font-size:.66rem; font-family:'Raleway',sans-serif; font-weight:500;
-    letter-spacing:.1em; text-decoration:none; border:1px solid;
-    transition:all .3s; text-transform:uppercase;
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:10px; border-radius:2px; font-size:.7rem; text-transform:uppercase;
+    text-decoration:none; border:1px solid; transition:0.3s;
   }
-  .btn-uiclap { color:#a09aff; border-color:rgba(160,154,255,.28); background:rgba(160,154,255,.05); }
-  .btn-uiclap:hover { background:rgba(160,154,255,.14); border-color:rgba(160,154,255,.55); }
+  .btn-uiclap { color:var(--gold); border-color:rgba(201,168,76,.3); }
+  .btn-uiclap:hover { background:var(--gold); color:#000; }
 
   /* ── AUDIOBOOK ── */
   .audio-feature {
-    background:var(--card); border:1px solid var(--border-hover); border-radius:3px;
-    overflow:hidden; display:grid; grid-template-columns:220px 1fr;
-    transition:border-color .4s; margin-top: 3rem;
+    background:var(--card); border:1px solid var(--border); border-radius:3px;
+    display:grid; grid-template-columns:200px 1fr; margin-top: 2rem;
   }
-  .audio-cover { position:relative; overflow:hidden; background:var(--bg3); }
-  .audio-cover img { width:100%; height:100%; object-fit:cover; display:block; }
-  .audio-body { padding:2.2rem; display:flex; flex-direction:column; }
-  .audio-title { font-family:'Cormorant Garamond',serif; font-size:2rem; color:var(--cream); margin-bottom:.5em; }
-  .audio-desc { font-size:.85rem; color:#a89e8e; line-height:1.9; margin-bottom:1.8rem; }
+  .audio-body { padding:2rem; }
 
-  /* ── SOCIAL SECTION ── */
-  .social-section { background:var(--bg3); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:3rem 2rem; text-align:center; }
-  .social-inner { max-width:680px; margin:0 auto; }
-  .social-title { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; font-style:italic; color:var(--cream); margin-bottom:2rem; opacity:.85; }
-  .social-links { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; }
-  .social-btn {
-    display:inline-flex; align-items:center; gap:9px;
-    font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:.2em; text-transform:uppercase;
-    padding:10px 22px; border-radius:2px; text-decoration:none; border:1px solid;
-    transition:all .35s;
+  @media(max-width:740px) {
+    .hero-author-row { flex-direction: column; }
+    .audio-feature { grid-template-columns: 1fr; }
   }
-  .s-yt  { color:#ff4444; border-color:rgba(255,68,68,.3); background:rgba(255,68,68,.04); }
-  .s-yt:hover  { background:rgba(255,68,68,.1); border-color:rgba(255,68,68,.6); }
-  .s-sp  { color:#1db954; border-color:rgba(29,185,84,.3); background:rgba(29,185,84,.04); }
-  .s-sp:hover  { background:rgba(29,185,84,.1); border-color:rgba(29,185,84,.6); }
-  .s-wa  { color:#4ade80; border-color:rgba(74,222,128,.3); background:rgba(74,222,128,.04); }
-  .s-wa:hover  { background:rgba(74,222,128,.1); border-color:rgba(74,222,128,.6); }
-
-  /* ── ABOUT & FOOTER ── */
-  .about-section { background:var(--bg); padding:5rem 2rem; text-align:center; border-top:1px solid var(--border); }
-  .about-avatar { width:78px; height:78px; border-radius:50%; border:1px solid rgba(201,168,76,.28); background:var(--bg3); margin:0 auto 1.6rem; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.7rem; color:var(--gold); }
-  .about-quote { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-style:italic; color:var(--cream); opacity:.8; }
-  footer { background:var(--bg); border-top:1px solid var(--border); padding:1.8rem 2rem; text-align:center; }
-  footer p { font-size:.64rem; color:var(--muted); opacity:.45; }
-
-  @media(max-width:740px) { .audio-feature { grid-template-columns:1fr; } .nav-links { display:none; } .hero-author-row { flex-direction: column; gap: 1rem; } .hero-author-photo { width: 140px; } }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a href="#topo" class="nav-logo">Éverton Marques</a>
+    <a href="#" class="nav-logo">Éverton Marques</a>
     <ul class="nav-links">
-      <li><a href="#ebooks">Obras</a></li>
-      <li><a href="#redes">Redes</a></li>
+      <li><a href="#livros">Obras</a></li>
+      <li><a href="#contato">Contato</a></li>
     </ul>
-    <div class="nav-social">
-      <a href="https://wa.me/5551991967327" class="nav-wa" target="_blank">WhatsApp</a>
-    </div>
   </div>
 </nav>
 
-<section class="hero" id="topo">
-  <div class="hero-bg"></div>
-  <p class="hero-eyebrow">Obras Autorais · Horror · Literatura das Sombras</p>
+<section class="hero">
   <div class="hero-author-row">
     <div class="hero-author-photo">
       <img src="https://github.com/evertongmarques-cpu.png" alt="Éverton Marques">
     </div>
     <div>
       <h1 class="hero-name">Éverton <em>Marques</em></h1>
-      <p class="hero-sub">Escritor & Narrador de Histórias</p>
+      <p class="hero-sub">Escritor de Horror & Mistério</p>
     </div>
   </div>
-  <div class="hero-rule"><span>✠</span></div>
-  <p class="hero-desc">Explorando o horror de proximidade e os mistérios que habitam entre a luz e a escuridão.</p>
-  <a href="#ebooks" class="hero-cta">Ver Catálogo</a>
 </section>
 
-<div id="ebooks" style="text-align:center; padding:5rem 2rem 2rem;">
-  <h2 style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; color:var(--cream);">Obras <em>Disponíveis</em></h2>
+<div id="livros" class="sec-head">
+  <h2 class="sec-title">Catálogo de <em>Sombras</em></h2>
 </div>
 
 <div class="books-wrap">
@@ -251,84 +157,54 @@
     <article class="book-card">
       <div class="book-cover">
         <img src="capa-irmao-maior.jpg" alt="Capa IRMÃO MAIOR">
-        <div class="format-badge">Físico</div>
         <div class="price-badge">R$ 40,94</div>
       </div>
       <div class="book-info">
-        <span class="book-genre">Espiritualidade</span>
         <h3 class="book-title">IRMÃO MAIOR</h3>
-        <p class="book-callout">Um relato de libertação que transforma o medo em despertar.</p>
-        <p class="book-desc">Em IRMÃO MAIOR, o autor despe-se das amarras religiosas para travar um diálogo visceral com a figura mais enigmática e amada da história.</p>
-        <div class="btns">
-          <a href="https://loja.uiclap.com/titulo/ua171656" class="btn btn-uiclap" target="_blank">Comprar na UICLAP</a>
-        </div>
+        <p class="book-desc">Um diálogo visceral que despe-se das amarras religiosas para transformar o medo em despertar espiritual.</p>
+        <a href="https://loja.uiclap.com/titulo/ua171656" class="btn btn-uiclap" target="_blank">Adquirir na UICLAP</a>
       </div>
     </article>
 
     <article class="book-card">
       <div class="book-cover">
         <img src="https://uiclap.s3.us-east-1.amazonaws.com/market/65846-alem-do-medo.jpg" alt="Capa Além do Medo">
-        <div class="format-badge">Físico</div>
         <div class="price-badge">R$ 38,50</div>
       </div>
       <div class="book-info">
-        <span class="book-genre">Terror & Suspense</span>
         <h3 class="book-title">Além do Medo</h3>
-        <p class="book-callout">Contos autorais de terror psicológico.</p>
-        <p class="book-desc">Uma coletânea de contos que exploram os limites do terror e o horror de proximidade.</p>
-        <div class="btns">
-          <a href="https://loja.uiclap.com/titulo/ua65846" class="btn btn-uiclap" target="_blank">Comprar na UICLAP</a>
-        </div>
+        <p class="book-desc">Contos de terror psicológico e horror de proximidade que exploram os limites do medo humano.</p>
+        <a href="https://loja.uiclap.com/titulo/ua65846" class="btn btn-uiclap" target="_blank">Adquirir na UICLAP</a>
       </div>
     </article>
 
     <article class="book-card">
       <div class="book-cover">
         <img src="https://uiclap.s3.us-east-1.amazonaws.com/market/66472-bestiario-de-arrepiar-o-catalogo-das-sombras.jpg" alt="Capa Bestiário">
-        <div class="format-badge">Físico</div>
         <div class="price-badge">R$ 44,00</div>
       </div>
       <div class="book-info">
-        <span class="book-genre">Enciclopédia</span>
         <h3 class="book-title">Bestiário de Arrepiar</h3>
-        <p class="book-callout">O Catálogo das Sombras.</p>
-        <p class="book-desc">Um guia completo sobre as criaturas que habitam o folclore e o imaginário sombrio.</p>
-        <div class="btns">
-          <a href="https://loja.uiclap.com/titulo/ua66472" class="btn btn-uiclap" target="_blank">Comprar na UICLAP</a>
-        </div>
+        <p class="book-desc">O catálogo das sombras. Um guia completo sobre criaturas que habitam o folclore sombrio.</p>
+        <a href="https://loja.uiclap.com/titulo/ua66472" class="btn btn-uiclap" target="_blank">Adquirir na UICLAP</a>
       </div>
     </article>
 
   </div>
 
   <div class="audio-feature">
-    <div class="audio-cover">
+    <div class="book-cover">
       <img src="https://hotmart.s3.amazonaws.com/product_contents/09f987f2-1b6c-4b6a-9e1e-f3f3f3f3f3f3/O-Homem-que-Encontrou-Deus.jpg" alt="Audiobook">
     </div>
     <div class="audio-body">
-      <h3 class="audio-title">O Homem que Encontrou Deus</h3>
-      <p class="audio-desc">Uma jornada filosófica e sombria sobre os encontros inesperados no limiar da realidade.</p>
-      <a href="https://hotmart.com/product/o-homem-que-encontrou-deus" class="btn" style="color:#f07860; border-color:#f07860;" target="_blank">Ouvir no Hotmart</a>
+      <h3 class="book-title">O Homem que Encontrou Deus</h3>
+      <p class="book-desc">Experiência imersiva em áudio. Uma jornada filosófica sobre o limiar da realidade.</p>
+      <a href="https://hotmart.com/product/o-homem-que-encontrou-deus" class="btn btn-uiclap" style="color:#f07860; border-color:#f07860;" target="_blank">Ouvir no Hotmart</a>
     </div>
   </div>
 </div>
 
-<section class="social-section" id="redes">
-  <div class="social-inner">
-    <h3 class="social-title">Acompanhe as histórias diariamente...</h3>
-    <div class="social-links">
-      <a href="https://youtube.com/c/ContosCausosdeArrepiar" class="social-btn s-yt" target="_blank">YouTube</a>
-      <a href="https://shre.ink/contosecausosdearrepiar" class="social-btn s-sp" target="_blank">Spotify</a>
-    </div>
-  </div>
-</section>
-
-<section class="about-section">
-  <div class="about-avatar">✠</div>
-  <p class="about-quote">"Não há nada a temer, além do que reside dentro de nós mesmos quando as luzes se apagam."</p>
-</section>
-
-<footer>
+<footer style="text-align:center; padding:3rem; border-top:1px solid var(--border); font-size:.7rem; color:var(--muted);">
   <p>© 2026 Éverton Marques — Contos & Causos de Arrepiar</p>
 </footer>
 
