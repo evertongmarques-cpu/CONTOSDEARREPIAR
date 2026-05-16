@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Éverton Marques — Horror & Literatura das Sombras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* Seus estilos originais mantidos integralmente */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0d0c0b;
+    --bg2: #111009;
+    --bg3: #181512;
+    --card: #131110;
+    --border: rgba(210,185,140,0.11);
+    --border-hover: rgba(210,185,140,0.28);
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --text: #c5c2bd;
+    --text-dim: #8a8682;
+    --accent: #5a0a0a;
+  }
+  body {
+    background-color: var(--bg);
+    background-image: 
+      radial-gradient(circle at 50% -20%, #1a1812 0%, transparent 70%),
+      url("https://www.transparenttextures.com/patterns/black-paper.png");
+    color: var(--text);
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    min-height: 100vh;
+  }
+
+  /* Estilos específicos para a nova seção do livro */
+  .new-book-section {
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  .book-cover-main {
+    width: 220px;
+    height: auto;
+    border: 1px solid var(--gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s ease;
+  }
+  .book-cover-main:hover {
+    transform: scale(1.03);
+  }
+
+  .container { width: 100%; max-width: 480px; }
+  header { text-align: center; margin-bottom: 3rem; }
+  .profile-frame {
+    width: 110px; height: 110px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    padding: 5px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+  }
+  .profile-img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: sepia(0.3) contrast(1.1);
+  }
+  h1 { font-family: 'Cinzel', serif; font-size: 1.6rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 0.5rem; }
+  .bio { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--text-dim); }
+
+  .links-grid { display: flex; flex-direction: column; gap: 1rem; }
+  .link-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 1.1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+  }
+  .link-card:hover {
+    background: var(--bg2);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  .icon-wrapper {
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    margin-right: 1rem;
+    color: var(--gold);
+  }
+  .link-info h2 { font-family: 'Cinzel', serif; font-size: 0.9rem; letter-spacing: 1px; color: var(--gold-light); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="profile-frame">
+    <img src="https://yt3.googleusercontent.com/ytc/AIdro_md6Xm9Q9H-R13fF553P6R721uL1C13ZzM9Z0f76B0=s160-c-k-c0x00ffffff-no-rj" alt="Éverton Marques" class="profile-img">
+  </div>
+  <h1>Éverton Marques</h1>
+  <p class="bio">Escritor & Narrador de Histórias de Terror</p>
+</header>
+
+<div class="container">
+  
+  <div class="new-book-section">
+    <img src="004edbac-a2da-4c39-8f54-b5e1c3beee2c" alt="Livro Além do Medo" class="book-cover-main">
+    <div class="links-grid">
+      <a href="https://loja.uiclap.com/titulo/ua55169/" class="link-card" target="_blank">
+        <div class="icon-wrapper">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+        </div>
+        <div class="link-info">
+          <h2>COMPRAR LIVRO FÍSICO (UICLAP)</h2>
+        </div>
+      </a>
+      <a href="https://pay.hotmart.com/L92437318S?checkoutMode=10" class="link-card" target="_blank">
+        <div class="icon-wrapper">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.48 13.35L15.01 12l2.47-1.35a.7.7 0 000-1.23l-5.02-2.73a.71.71 0 00-.71 0l-5.02 2.73a.7.7 0 000 1.23L9.19 12l-2.47 1.35a.7.7 0 000 1.23l5.02 2.73a.71.71 0 00.71 0l5.02-2.73a.7.7 0 000-1.23z"/></svg>
+        </div>
+        <div class="link-info">
+          <h2>ADQUIRIR E-BOOK (DIGITAL)</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <hr style="border: 0; border-top: 1px solid var(--border); margin: 2rem 0;">
+
+  <div class="links-grid">
+    <a href="https://www.youtube.com/@contosecausosdearrepiar" class="link-card" target="_blank">
+      <div class="icon-wrapper">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+      <div class="link-info">
+        <h2>YouTube — Contos & Causos de Arrepiar</h2>
+      </div>
+    </a>
+
+    <a href="https://open.spotify.com/show/00S69E5vK6YhY7f7S87X7F" class="link-card" target="_blank">
+      <div class="icon-wrapper">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.508 17.302c-.218.337-.655.442-.992.224-2.73-1.666-6.16-2.045-10.207-1.12-.38.087-.76-.153-.847-.533-.087-.38.153-.76.533-.847 4.434-1.01 8.228-.574 11.29 1.292.336.218.441.655.223.992zm1.474-3.258c-.274.448-.86.59-1.308.316-3.123-1.92-7.882-2.474-11.574-1.353-.505.153-1.033-.135-1.186-.64-.153-.505.135-1.033.64-1.186 4.223-1.282 9.48-.654 13.11 1.575.448.274.59.86.318 1.308zm.126-3.418C15.518 8.443 9.53 8.243 6.082 9.29c-.563.17-1.164-.147-1.334-.71-.17-.563.147-1.164.71-1.334 3.967-1.204 10.574-.972 14.717 1.488.506.3 1.012.15 1.162.656.15.506-.15 1.012-.656 1.162z"/></svg>
+      </div>
+      <div class="link-info">
+        <h2>Spotify — Podcast</h2>
+      </div>
+    </a>
+
+    <a href="https://www.tiktok.com/@contosecausosdearrepiar" class="link-card" target="_blank">
+        <div class="icon-wrapper">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.44-4.14-1.17-.11-.07-.22-.14-.32-.22-.04 2.8-.02 5.6-.04 8.4-.04 2.1-.64 4.22-1.98 5.85-1.41 1.75-3.66 2.82-5.96 2.91-2.45.12-4.94-.86-6.49-2.78-1.57-1.89-2-4.52-1.2-6.88.69-2.11 2.5-3.83 4.67-4.41.42-.11.85-.18 1.29-.21V11.2c-1.13.11-2.22.66-2.92 1.55-.7.88-.95 2.06-.7 3.17.27 1.16 1.09 2.15 2.16 2.6 1.13.48 2.45.41 3.52-.18 1.07-.58 1.73-1.7 1.78-2.91.04-3.14.02-6.28.03-9.42z"/></svg>
+        </div>
+        <div class="link-info">
+          <h2>TikTok — Cortes Diários</h2>
+        </div>
+      </a>
+      
+      <a href="https://www.instagram.com/contosecausosdearrepiar" class="link-card" target="_blank">
+        <div class="icon-wrapper">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.412.56.216.96.474 1.38.894.42.42.678.82.894 1.38.163.422.358 1.057.412 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.249 1.805-.412 2.227-.216.56-.474.96-.894 1.38-.42.42-.82.678-1.38.894-.422.163-1.057.358-2.227.412-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.412-.56-.216-.96-.474-1.38-.894-.42-.42-.678-.82-.894-1.38-.163-.422-.358-1.057-.412-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.249-1.805.412-2.227.216-.56.474-.96.894-1.38.42-.42.82-.678 1.38-.894.422-.163 1.057-.358 2.227-.412 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.741 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126s1.384 1.127 2.126 1.432c.765.303 1.636.504 2.913.56 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.277-.06 2.148-.262 2.913-.56.788-.306 1.459-.718 2.126-1.384s1.127-1.384 1.432-2.126c.303-.765.504-1.636.56-2.913.058-1.28.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.06-1.277-.262-2.149-.56-2.913-.306-.789-.718-1.459-1.384-2.126s-1.384-1.127-2.126-1.432c-.765-.303-1.636-.504-2.913-.56C15.667.014 15.259 0 12 0z"/><path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+        </div>
+        <div class="link-info">
+          <h2>Instagram</h2>
+        </div>
+      </a>
+      
+      <a href="https://www.facebook.com/contosecausosdearrepiar" class="link-card" target="_blank">
+        <div class="icon-wrapper">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        </div>
+        <div class="link-info">
+          <h2>Facebook</h2>
+        </div>
+      </a>
+
+  </div>
+</div>
+
+<footer style="margin-top: 4rem; color: var(--text-dim); font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">
+  &copy; 2026 Éverton Marques — Todos os direitos reservados
+</footer>
+
+</body>
+</html>
